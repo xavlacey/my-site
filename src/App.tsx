@@ -19,7 +19,7 @@ function App() {
           <a href="mailto:x@vierlacey.com" target="_blank" rel="noreferrer">
             <img src={EmailSvg} alt="email" />
           </a>
-          <a href="https://github.com/kimjongxav/" target="_blank" rel="noreferrer">
+          <a href="https://github.com/xavlacey/" target="_blank" rel="noreferrer">
             <img src={GithubSvg} alt="github" />
           </a>
           <a href="https://www.linkedin.com/in/xlacey/" target="_blank" rel="noreferrer">
