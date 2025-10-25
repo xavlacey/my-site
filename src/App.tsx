@@ -1,7 +1,7 @@
-import './App.scss'
-import EmailSvg from './email.svg'
-import GithubSvg from './github.svg'
-import LinkedInSvg from './linkedin.svg'
+import "./App.scss";
+import EmailSvg from "./email.svg";
+import GithubSvg from "./github.svg";
+import LinkedInSvg from "./linkedin.svg";
 
 function App() {
   return (
@@ -11,25 +11,34 @@ function App() {
       </h1>
       <div className="content">
         <p>
-          Hi I'm Xav, a software engineer living in London with five years' experience building
-          great products specialising in Node.js, TypeScript and React.
+          Hi I'm Xav, a software engineer living in Lisbon with eight years'
+          experience building great products specialising in Node.js, TypeScript
+          and React.
         </p>
         <div className="links">
           {/* <div className="icons"> */}
           <a href="mailto:x@vierlacey.com" target="_blank" rel="noreferrer">
             <img src={EmailSvg} alt="email" />
           </a>
-          <a href="https://github.com/xavlacey/" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/xavlacey/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={GithubSvg} alt="github" />
           </a>
-          <a href="https://www.linkedin.com/in/xlacey/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/in/xlacey/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={LinkedInSvg} alt="linkedin" />
           </a>
           {/* </div> */}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
