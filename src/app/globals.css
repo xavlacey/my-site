@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Source+Code+Pro:wght@600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Custom SVG filter for orange hover effect */
+.icon-hover {
+  filter: invert(100%) sepia(58%) saturate(2%) hue-rotate(31deg)
+    brightness(111%) contrast(101%);
+}
+
+.icon-hover:hover {
+  filter: invert(86%) sepia(23%) saturate(7268%) hue-rotate(349deg)
+    brightness(91%) contrast(87%);
+}
+
+/* Orange icon styling */
+.orange-icon {
+  filter: invert(86%) sepia(23%) saturate(7268%) hue-rotate(349deg)
+    brightness(91%) contrast(87%);
+}
+
+.orange-icon:hover {
+  filter: invert(86%) sepia(23%) saturate(7268%) hue-rotate(349deg)
+    brightness(110%) contrast(95%);
+}
