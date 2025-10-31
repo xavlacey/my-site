@@ -6,33 +6,29 @@ import linkedinIcon from "../linkedin.svg";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 grain-bg">
-      <nav className="max-w-4xl mx-auto px-6 py-6 flex justify-end items-center">
-        <div className="flex items-center gap-4">
-          <Link
-            href="/cv"
-            className="text-slate-300 hover:text-orange-400 text-2xl transition-colors font-medium p-2"
-          >
-            CV
-          </Link>
-          <Links />
-        </div>
-      </nav>
-      <div className="max-w-4xl mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-[80vh]">
-        <div className="text-center space-y-6">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 grain-bg">
+      <section className="max-w-4xl mx-auto px-6 flex items-center justify-center min-h-screen">
+        <div className="space-y-8 max-w-2xl">
           <Name />
-          <div className="max-w-2xl">
-            <Description />
+          <Description />
+          <div className="flex items-center gap-6">
+            <Link
+              href="/cv"
+              className="text-slate-300 hover:text-orange-400 text-2xl transition-colors font-medium"
+            >
+              CV
+            </Link>
+            <Links />
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
 const Name = () => {
   return (
-    <h1 className="text-6xl font-bold text-slate-100">
+    <h1 className="pt-24 text-6xl font-bold text-slate-100">
       <span className="text-orange-400">Xav</span>ier Lacey
     </h1>
   );
@@ -40,11 +36,17 @@ const Name = () => {
 
 const Description = () => {
   return (
-    <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
-      Hi I'm Xav, a software engineer living in Lisbon with eight years'
-      experience building great products specialising in Node.js, TypeScript and
-      React.
-    </p>
+    <div className="space-y-4">
+      <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
+        Hi I'm Xav, a software engineer living in Lisbon with eight years'
+        experience building great products specialising in Node.js, TypeScript
+        and React.
+      </p>
+      <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
+        I like climbing, cycling, cryptic crosswords and some other things that
+        don't begin with C.
+      </p>
+    </div>
   );
 };
 
@@ -55,7 +57,7 @@ const Links = () => {
         href="mailto:x@vierlacey.com"
         target="_blank"
         rel="noreferrer"
-        className="p-2 rounded-lg hover:bg-slate-700/50 transition-colors group"
+        className="p-2 rounded-lg transition-colors group"
       >
         <Image
           src={emailIcon}
@@ -69,7 +71,7 @@ const Links = () => {
         href="https://github.com/xavlacey/"
         target="_blank"
         rel="noreferrer"
-        className="p-2 rounded-lg hover:bg-slate-700/50 transition-colors group"
+        className="p-2 rounded-lg transition-colors group"
       >
         <Image
           src={githubIcon}
@@ -83,7 +85,7 @@ const Links = () => {
         href="https://www.linkedin.com/in/xlacey/"
         target="_blank"
         rel="noreferrer"
-        className="p-2 rounded-lg hover:bg-slate-700/50 transition-colors group"
+        className="p-2 rounded-lg transition-colors group"
       >
         <Image
           src={linkedinIcon}
