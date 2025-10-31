@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik Glitch:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +11,28 @@
 
   * {
     @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .icon-link {
+    @apply p-2 rounded-lg transition-colors;
+  }
+
+  .body-text {
+    @apply text-xl md:text-2xl text-stone-300 leading-relaxed;
+  }
+
+  .nav-link {
+    @apply text-stone-300 hover:text-orange-400 transition-colors font-medium;
+  }
+
+  .experience-section-title {
+    @apply text-sm font-semibold text-stone-200 tracking-wider mb-2;
+  }
+
+  .name-title {
+    font-family: "Rubik Glitch", serif;
   }
 }
 
@@ -36,10 +60,12 @@
   }
 
   .icon-light {
-    filter: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(365%) hue-rotate(178deg) brightness(93%) contrast(88%);
+    filter: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(365%)
+      hue-rotate(178deg) brightness(93%) contrast(88%);
   }
 
   .icon-light:hover {
-    filter: brightness(0) saturate(100%) invert(64%) sepia(79%) saturate(2574%) hue-rotate(338deg) brightness(101%) contrast(90%);
+    filter: brightness(0) saturate(100%) invert(64%) sepia(79%) saturate(2574%)
+      hue-rotate(338deg) brightness(101%) contrast(90%);
   }
 }

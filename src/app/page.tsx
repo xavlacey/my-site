@@ -6,16 +6,13 @@ import linkedinIcon from "../linkedin.svg";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 grain-bg">
+    <main className="min-h-screen bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
       <section className="max-w-4xl mx-auto px-6 flex items-center justify-center min-h-screen">
         <div className="space-y-8 max-w-2xl">
           <Name />
           <Description />
           <div className="flex items-center gap-6">
-            <Link
-              href="/cv"
-              className="text-slate-300 hover:text-orange-400 text-2xl transition-colors font-medium"
-            >
+            <Link href="/cv" className="nav-link text-2xl">
               CV
             </Link>
             <Links />
@@ -28,7 +25,7 @@ export default function Home() {
 
 const Name = () => {
   return (
-    <h1 className="pt-24 text-6xl font-bold text-slate-100">
+    <h1 className="name-title pt-24 text-6xl text-stone-100">
       <span className="text-orange-400">Xav</span>ier Lacey
     </h1>
   );
@@ -37,14 +34,14 @@ const Name = () => {
 const Description = () => {
   return (
     <div className="space-y-4">
-      <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
+      <p className="body-text">
         Hi I'm Xav, a software engineer living in Lisbon with eight years'
         experience building great products specialising in Node.js, TypeScript
         and React.
       </p>
-      <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
+      <p className="body-text">
         I like climbing, cycling, cryptic crosswords and some other things that
-        don't begin with C.
+        don't begin with 'c'.
       </p>
     </div>
   );
@@ -57,7 +54,7 @@ const Links = () => {
         href="mailto:x@vierlacey.com"
         target="_blank"
         rel="noreferrer"
-        className="p-2 rounded-lg transition-colors group"
+        className="icon-link"
       >
         <Image
           src={emailIcon}
@@ -71,7 +68,7 @@ const Links = () => {
         href="https://github.com/xavlacey/"
         target="_blank"
         rel="noreferrer"
-        className="p-2 rounded-lg transition-colors group"
+        className="icon-link"
       >
         <Image
           src={githubIcon}
@@ -85,7 +82,7 @@ const Links = () => {
         href="https://www.linkedin.com/in/xlacey/"
         target="_blank"
         rel="noreferrer"
-        className="p-2 rounded-lg transition-colors group"
+        className="icon-link"
       >
         <Image
           src={linkedinIcon}
