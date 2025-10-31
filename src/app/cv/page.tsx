@@ -2,122 +2,126 @@ import Link from "next/link";
 
 export default function CV() {
   return (
-    <div>
-      <nav>
-        <Link href="/">← back</Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 grain-bg">
+      <nav className="max-w-4xl mx-auto px-6 py-6">
+        <Link
+          href="/"
+          className="text-slate-300 hover:text-orange-400 transition-colors font-medium inline-flex items-center gap-2"
+        >
+          ← back
+        </Link>
       </nav>
 
-      <div>
-        <h1>
-          <span>CV</span>
+      <div className="max-w-4xl mx-auto px-6 pb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-slate-100 mb-12">
+          CV
         </h1>
+        <div className="flex flex-col gap-8">
+        <ExperienceSection
+          props={{
+            jobTitle: "Senior Software Engineer, Contract",
+            startDate: "Jan 2025",
+            endDate: "Present",
+            company: "Material Index",
+            description:
+              "Full-stack engineer at a circular economy company, focused on reducing construction waste.",
+            stack: [
+              "Node.js",
+              "TypeScript",
+              "React",
+              "PostgreSQL",
+              "AWS",
+              "MongoDB",
+              "SST",
+            ],
+            responsibilities: [
+              "Delivered a brand new marketplace product from conception to launch as part of a small, cross-functional team.",
+              "Maintained and enhanced a bespoke audit application, ensuring reliability and performance for existing users",
+              "Worked autonomously in a startup environment, balancing multiple product streams and adapting quickly to evolving business needs.",
+            ],
+          }}
+        />
 
-        <div>
-          <ExperienceSection
-            props={{
-              jobTitle: "Senior Software Engineer, Contract",
-              startDate: "Jan 2025",
-              endDate: "Present",
-              company: "Material Index",
-              description:
-                "Full-stack engineer at a circular economy company, focused on reducing construction waste.",
-              stack: [
-                "Node.js",
-                "TypeScript",
-                "React",
-                "PostgreSQL",
-                "AWS",
-                "MongoDB",
-                "SST",
-              ],
-              responsibilities: [
-                "Delivered a brand new marketplace product from conception to launch as part of a small, cross-functional team.",
-                "Maintained and enhanced a bespoke audit application, ensuring reliability and performance for existing users",
-                "Worked autonomously in a startup environment, balancing multiple product streams and adapting quickly to evolving business needs.",
-              ],
-            }}
-          />
+        <ExperienceSection
+          props={{
+            jobTitle: "Backend Software Engineer",
+            startDate: "August 2022",
+            endDate: "December 2024",
+            company: "Sylvera",
+            description:
+              "Backend engineer at a climate tech company, working across platform and product teams.",
+            stack: [
+              "Node.js",
+              "TypeScript",
+              "GraphQL",
+              "PostgreSQL",
+              "AWS",
+              "Docker",
+              "Omni BI",
+            ],
+            responsibilities: [
+              "Designed, developed, and managed RESTful and GraphQL APIs in TypeScript delivering user-focused solutions for both internal and external stakeholders.",
+              "Tech lead for a new product that successfully delivered on-time, connected our clients with 200 developers and suppliers, and significantly enhanced client engagement.",
+              "Initiated weekly communication between teams to align system architecture and technical solutions, and achieve project goals.",
+              "Took initiative to build a business intelligence dashboard used by multiple teams to resolve internal bottlenecks and streamline product processes.",
+              "Spearheaded and facilitated key discussions on engineering standards, including leading a workshop that promoted best practices in testing, database design and code structure; fostered a culture of technical excellence.",
+              "Led many technical interviews; redesigned the coding challenge and encouraged a fairer interview process.",
+            ],
+          }}
+        />
 
-          <ExperienceSection
-            props={{
-              jobTitle: "Backend Software Engineer",
-              startDate: "August 2022",
-              endDate: "December 2024",
-              company: "Sylvera",
-              description:
-                "Backend engineer at a climate tech company, working across platform and product teams.",
-              stack: [
-                "Node.js",
-                "TypeScript",
-                "GraphQL",
-                "PostgreSQL",
-                "AWS",
-                "Docker",
-                "Omni BI",
-              ],
-              responsibilities: [
-                "Designed, developed, and managed RESTful and GraphQL APIs in TypeScript delivering user-focused solutions for both internal and external stakeholders.",
-                "Tech lead for a new product that successfully delivered on-time, connected our clients with 200 developers and suppliers, and significantly enhanced client engagement.",
-                "Initiated weekly communication between teams to align system architecture and technical solutions, and achieve project goals.",
-                "Took initiative to build a business intelligence dashboard used by multiple teams to resolve internal bottlenecks and streamline product processes.",
-                "Spearheaded and facilitated key discussions on engineering standards, including leading a workshop that promoted best practices in testing, database design and code structure; fostered a culture of technical excellence.",
-                "Led many technical interviews; redesigned the coding challenge and encouraged a fairer interview process.",
-              ],
-            }}
-          />
+        <ExperienceSection
+          props={{
+            jobTitle: "Full-Stack Software Engineer",
+            startDate: "August 2017",
+            endDate: "July 2022",
+            company: "LoyaltyLion",
+            description:
+              "Full-stack engineer at e-commerce startup. Joined as the seventh employee, contributing significantly to the company’s growth through multiple product and team development phases.",
+            stack: [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "React",
+              "Redux",
+              "Ruby",
+              "Ruby on Rails",
+              "Sidekiq",
+              "AWS",
+            ],
+            responsibilities: [
+              "Delivered features end-to-end across public RESTful Node.js/React and Ruby on Rails applications, enhancing platform capabilities and user experience.",
+              "Proactively optimised team workflows and documentation, streamlining development processes and improving cross-functional collaboration.",
+              "Automated documentation quality checks by integrating a doc linting tool into the build pipeline enhancing client-facing API documentation quality.",
+            ],
+          }}
+        />
 
-          <ExperienceSection
-            props={{
-              jobTitle: "Full-Stack Software Engineer",
-              startDate: "August 2017",
-              endDate: "July 2022",
-              company: "LoyaltyLion",
-              description:
-                "Full-stack engineer at e-commerce startup. Joined as the seventh employee, contributing significantly to the company’s growth through multiple product and team development phases.",
-              stack: [
-                "Node.js",
-                "TypeScript",
-                "PostgreSQL",
-                "React",
-                "Redux",
-                "Ruby",
-                "Ruby on Rails",
-                "Sidekiq",
-                "AWS",
-              ],
-              responsibilities: [
-                "Delivered features end-to-end across public RESTful Node.js/React and Ruby on Rails applications, enhancing platform capabilities and user experience.",
-                "Proactively optimised team workflows and documentation, streamlining development processes and improving cross-functional collaboration.",
-                "Automated documentation quality checks by integrating a doc linting tool into the build pipeline enhancing client-facing API documentation quality.",
-              ],
-            }}
-          />
+        <ExperienceSection
+          props={{
+            jobTitle: "Software Developer",
+            startDate: "September 2016",
+            endDate: "July 2017",
+            company: "The Education Hub Group",
+            description:
+              "Node.js backend developer responsible for building and maintaining the API for our bespoke platform for schools.",
+            stack: ["Node.js", "JavaScript"],
+            responsibilities: [
+              "Second employee and developed the idea into a fully-functioning web app.",
+            ],
+          }}
+        />
 
-          <ExperienceSection
-            props={{
-              jobTitle: "Software Developer",
-              startDate: "September 2016",
-              endDate: "July 2017",
-              company: "The Education Hub Group",
-              description:
-                "Node.js backend developer responsible for building and maintaining the API for our bespoke platform for schools.",
-              stack: ["Node.js", "JavaScript"],
-              responsibilities: [
-                "Second employee and developed the idea into a fully-functioning web app.",
-              ],
-            }}
-          />
-
-          <ExperienceSection
-            props={{
-              jobTitle: "Graduate Electrical Building Services Engineer",
-              startDate: "June 2015",
-              endDate: "March 2016",
-              company: "Mott MacDonald",
-              description:
-                "Designed electrical systems for the new Canary Wharf Crossrail station.",
-            }}
-          />
+        <ExperienceSection
+          props={{
+            jobTitle: "Graduate Electrical Building Services Engineer",
+            startDate: "June 2015",
+            endDate: "March 2016",
+            company: "Mott MacDonald",
+            description:
+              "Designed electrical systems for the new Canary Wharf Crossrail station.",
+          }}
+        />
         </div>
       </div>
     </div>
@@ -146,33 +150,46 @@ const ExperienceSection = ({ props }: { props: ExperienceProps }) => {
   } = props;
 
   return (
-    <div>
-      <div>
-        <h2>{jobTitle}</h2>
-        <span>
+    <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl shadow-lg border border-slate-700/50 p-6 md:p-8 hover:shadow-xl hover:border-slate-600/50 transition-all">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+        <h2 className="text-2xl font-bold text-slate-100">{jobTitle}</h2>
+        <span className="text-sm text-slate-400 md:text-right whitespace-nowrap">
           {startDate} – {endDate}
         </span>
       </div>
-      <h3>{company}</h3>
-      <p>{description}</p>
+      <h3 className="text-xl font-semibold text-orange-400 mb-3">{company}</h3>
+      <p className="text-slate-300 leading-relaxed mb-4">{description}</p>
       {stack && (
-        <div>
-          <h4>Tech Stack:</h4>
-          <ul>
-            {stack.map((s: string) => {
-              return <p>{s}</p>;
+        <div className="mb-4">
+          <h4 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-2">
+            Tech Stack
+          </h4>
+          <div className="flex flex-wrap gap-2">
+            {stack.map((s: string, index: number) => {
+              return (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-slate-700/70 text-slate-200 rounded-full text-sm border border-slate-600/50"
+                >
+                  {s}
+                </span>
+              );
             })}
-            {/* <span>Node.js</span>
-          <span>JavaScript</span> */}
-          </ul>
+          </div>
         </div>
       )}
       {responsibilities && (
         <div>
-          <h4>Responsibilities:</h4>
-          <ul>
-            {responsibilities.map((r: string) => {
-              return <li>{r}</li>;
+          <h4 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-3">
+            Responsibilities
+          </h4>
+          <ul className="space-y-2">
+            {responsibilities.map((r: string, index: number) => {
+              return (
+                <li key={index} className="text-slate-300 leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-orange-400">
+                  {r}
+                </li>
+              );
             })}
           </ul>
         </div>
