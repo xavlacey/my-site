@@ -116,22 +116,35 @@ const Lines = () => {
   const generateWaveLetter = (
     position: number,
     currentOffset: number,
-    currentSquareness: number
+    currentSquareness: number,
+    currentSmoothness: number
   ): string => {
-    // Create a triangle wave: 0-51 (up), then 51-0 (down)
     const cycleLength = letterCount * 2; // 104 (up 52 + down 52)
     const positionInCycle = (position + currentOffset) % cycleLength;
 
-    let letterIndex: number;
-
+    // Calculate triangle wave letter index
+    let triangleIndex: number;
     if (positionInCycle < letterCount) {
       // Going up: a to Z
-      letterIndex = positionInCycle;
+      triangleIndex = positionInCycle;
     } else {
       // Going down: Z to a
       const reversePosition = cycleLength - positionInCycle - 1;
-      letterIndex = reversePosition;
+      triangleIndex = reversePosition;
     }
+
+    // Calculate sine wave letter index
+    // Map positionInCycle (0-103) to angle (0 to 2π)
+    const angle = (positionInCycle / cycleLength) * Math.PI * 2;
+    // Sin value from -1 to 1, map to 0 to 51
+    const sinValue = Math.sin(angle);
+    const sineIndex = Math.round(((sinValue + 1) / 2) * (letterCount - 1));
+
+    // Blend between triangle and sine wave based on smoothness
+    const smoothnessFactor = currentSmoothness / 100;
+    let letterIndex = Math.round(
+      triangleIndex * (1 - smoothnessFactor) + sineIndex * smoothnessFactor
+    );
 
     // Apply squareness: interpolate between smooth position and square wave
     // At 100% squareness: use 0 (a) for first half, 51 (Z) for second half
@@ -161,7 +174,12 @@ const Lines = () => {
     for (let i = 0; i < 210; i++) {
       if (Math.random() < currentSmoothness / 100) {
         // Use wave pattern
-        resultText += generateWaveLetter(i, currentOffset, currentSquareness);
+        resultText += generateWaveLetter(
+          i,
+          currentOffset,
+          currentSquareness,
+          currentSmoothness
+        );
       } else {
         // Use random letter
         resultText += letters[Math.floor(Math.random() * letters.length)];
