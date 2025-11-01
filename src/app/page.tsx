@@ -105,7 +105,7 @@ const Links = () => {
 
 const Lines = () => {
   const [text, setText] = useState("");
-  const [speed, setSpeed] = useState(100);
+  const [speed, setSpeed] = useState(50);
   const [smoothness, setSmoothness] = useState(0);
   const [squareness, setSquareness] = useState(0);
   const [offset, setOffset] = useState(0);
@@ -212,7 +212,7 @@ const Lines = () => {
           htmlFor="speed-dial"
           className="text-stone-300 text-sm whitespace-nowrap"
         >
-          Speed:
+          Speedness:
         </label>
         <input
           id="speed-dial"
