@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import emailIcon from "../email.svg";
@@ -101,7 +104,29 @@ const Links = () => {
 };
 
 const Lines = () => {
-  const text = "greenacresbeverlyhillbillieshootervillejunction".repeat(20);
+  const [text, setText] = useState("");
+
+  const generateRandomLetters = () => {
+    const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let randomText = "";
+    for (let i = 0; i < 210; i++) {
+      randomText += letters[Math.floor(Math.random() * letters.length)];
+    }
+    return randomText;
+  };
+
+  useEffect(() => {
+    // Generate initial text
+    setText(generateRandomLetters());
+
+    // Update every second
+    const interval = setInterval(() => {
+      setText(generateRandomLetters());
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="lines-container w-full overflow-hidden">
       <p className="lines text-stone-300">{text}</p>
