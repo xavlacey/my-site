@@ -7,15 +7,19 @@ import linkedinIcon from "../linkedin.svg";
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
-      <section className="max-w-4xl mx-auto px-6 flex items-center justify-center min-h-screen">
-        <div className="space-y-8 max-w-2xl">
+      <section className="max-w-4xl mx-auto px-6 flex flex-col items-center justify-center min-h-screen overflow-x-visible">
+        <div className="space-y-8 max-w-2xl w-full">
           <Name />
           <Description />
+          {/* move all this to Links */}
           <div className="flex items-center gap-6">
             <Link href="/cv" className="nav-link text-2xl">
               CV
             </Link>
             <Links />
+          </div>
+          <div className="w-full max-w-4xl mt-8">
+            <Lines />
           </div>
         </div>
       </section>
@@ -25,7 +29,7 @@ export default function Home() {
 
 const Name = () => {
   return (
-    <h1 className="name-title pt-24 text-6xl text-stone-100">
+    <h1 className="name-title pt-24 text-4xl sm:text-5xl md:text-6xl text-stone-100 break-words">
       <span className="text-orange-400">Xav</span>ier Lacey
     </h1>
   );
@@ -34,14 +38,14 @@ const Name = () => {
 const Description = () => {
   return (
     <div className="space-y-4">
-      <p className="body-text">
+      <p className="body-text description-text break-words">
         Hi I'm Xav, a software engineer living in Lisbon with eight years'
         experience building great products specialising in Node.js, TypeScript
         and React.
       </p>
-      <p className="body-text">
-        I like climbing, cycling, cryptic crosswords and some other things that
-        don't begin with 'c'.
+      <p className="body-text description-text break-words">
+        I like climbing, cycling, camping, cryptic crosswords and some other
+        things that don't begin with 'c'.
       </p>
     </div>
   );
@@ -95,3 +99,14 @@ const Links = () => {
     </div>
   );
 };
+
+const Lines = () => {
+  const text = "greenacresbeverlyhillbillieshootervillejunction".repeat(20);
+  return (
+    <div className="lines-container w-full overflow-hidden">
+      <p className="lines text-stone-300">{text}</p>
+    </div>
+  );
+};
+
+// ĀŤĀŤĀŤĀŤĀŤŤĀĀŤŤĀĀŤŤĀĀŤŤĀĀŤŤĀĀŤŤŤŤĀĀĀĀŤŤŤŤĀĀĀĀŤŤŤŤĀĀŤŤŤŤĀĀĀĀŤŤŤŤŤŤŤŤĀĀĀĀĀĀĀĀŤŤŤŤŤŤŤŤĀĀĀĀĀĀĀĀĀĀĀŤŤŤŤŤŤŤŤŤŤŤŤŤŤŤŤĀĀĀĀĀĀĀĀĀĀĀĀĀĀĀĀŤŤŤŤŤŤŤŤŤŤŤŤŤŤŤŤĀĀĀĀ
