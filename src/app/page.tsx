@@ -156,7 +156,7 @@ const Lines = () => {
     // Update based on speed
     const interval = setInterval(() => {
       setOffset((prev) => {
-        const newOffset = prev + 1;
+        const newOffset = prev + 3;
         setText(generateRandomLetters(newOffset, smoothness));
         return newOffset;
       });
@@ -172,16 +172,16 @@ const Lines = () => {
           htmlFor="speed-dial"
           className="text-stone-300 text-sm whitespace-nowrap"
         >
-          Speed: {speed}ms
+          Speed:
         </label>
         <input
           id="speed-dial"
           type="range"
           min="1"
-          max="200"
+          max="100"
           step="1"
-          value={speed}
-          onChange={(e) => setSpeed(Number(e.target.value))}
+          value={101 - speed}
+          onChange={(e) => setSpeed(101 - Number(e.target.value))}
           className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
         />
       </div>
@@ -190,7 +190,7 @@ const Lines = () => {
           htmlFor="smoothness-dial"
           className="text-stone-300 text-sm whitespace-nowrap"
         >
-          Smoothness: {smoothness}%
+          Smoothness:
         </label>
         <input
           id="smoothness-dial"
