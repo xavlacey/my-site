@@ -105,6 +105,7 @@ const Links = () => {
 
 const Lines = () => {
   const [text, setText] = useState("");
+  const [speed, setSpeed] = useState(100);
 
   const generateRandomLetters = () => {
     const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -119,17 +120,37 @@ const Lines = () => {
     // Generate initial text
     setText(generateRandomLetters());
 
-    // Update every second
+    // Update based on speed
     const interval = setInterval(() => {
       setText(generateRandomLetters());
-    }, 100);
+    }, speed);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [speed]);
 
   return (
-    <div className="lines-container w-full overflow-hidden">
-      <p className="lines text-stone-300">{text}</p>
+    <div className="w-full space-y-4">
+      <div className="flex items-center gap-4">
+        <label
+          htmlFor="speed-dial"
+          className="text-stone-300 text-sm whitespace-nowrap"
+        >
+          Speed: {speed}ms
+        </label>
+        <input
+          id="speed-dial"
+          type="range"
+          min="1"
+          max="200"
+          step="1"
+          value={speed}
+          onChange={(e) => setSpeed(Number(e.target.value))}
+          className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
+        />
+      </div>
+      <div className="lines-container w-full overflow-hidden">
+        <p className="lines text-stone-300">{text}</p>
+      </div>
     </div>
   );
 };
