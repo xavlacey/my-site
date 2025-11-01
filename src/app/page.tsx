@@ -106,27 +106,64 @@ const Links = () => {
 const Lines = () => {
   const [text, setText] = useState("");
   const [speed, setSpeed] = useState(100);
+  const [smoothness, setSmoothness] = useState(0);
+  const [offset, setOffset] = useState(0);
 
-  const generateRandomLetters = () => {
-    const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let randomText = "";
-    for (let i = 0; i < 210; i++) {
-      randomText += letters[Math.floor(Math.random() * letters.length)];
+  const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letterCount = letters.length; // 52
+
+  const generateWaveLetter = (
+    position: number,
+    currentOffset: number
+  ): string => {
+    // Create a triangle wave: 0-51 (up), then 51-0 (down)
+    const cycleLength = letterCount * 2; // 104 (up 52 + down 52)
+    const positionInCycle = (position + currentOffset) % cycleLength;
+
+    if (positionInCycle < letterCount) {
+      // Going up: a to Z
+      return letters[positionInCycle];
+    } else {
+      // Going down: Z to a
+      const reversePosition = cycleLength - positionInCycle - 1;
+      return letters[reversePosition];
     }
-    return randomText;
+  };
+
+  const generateRandomLetters = (
+    currentOffset: number,
+    currentSmoothness: number
+  ) => {
+    let resultText = "";
+
+    for (let i = 0; i < 210; i++) {
+      if (Math.random() < currentSmoothness / 100) {
+        // Use wave pattern
+        resultText += generateWaveLetter(i, currentOffset);
+      } else {
+        // Use random letter
+        resultText += letters[Math.floor(Math.random() * letters.length)];
+      }
+    }
+
+    return resultText;
   };
 
   useEffect(() => {
     // Generate initial text
-    setText(generateRandomLetters());
+    setText(generateRandomLetters(offset, smoothness));
 
     // Update based on speed
     const interval = setInterval(() => {
-      setText(generateRandomLetters());
+      setOffset((prev) => {
+        const newOffset = prev + 1;
+        setText(generateRandomLetters(newOffset, smoothness));
+        return newOffset;
+      });
     }, speed);
 
     return () => clearInterval(interval);
-  }, [speed]);
+  }, [speed, smoothness]);
 
   return (
     <div className="w-full space-y-4">
@@ -145,6 +182,24 @@ const Lines = () => {
           step="1"
           value={speed}
           onChange={(e) => setSpeed(Number(e.target.value))}
+          className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
+        />
+      </div>
+      <div className="flex items-center gap-4">
+        <label
+          htmlFor="smoothness-dial"
+          className="text-stone-300 text-sm whitespace-nowrap"
+        >
+          Smoothness: {smoothness}%
+        </label>
+        <input
+          id="smoothness-dial"
+          type="range"
+          min="0"
+          max="100"
+          step="1"
+          value={smoothness}
+          onChange={(e) => setSmoothness(Number(e.target.value))}
           className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
         />
       </div>
