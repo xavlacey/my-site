@@ -1,16 +1,3 @@
-# My Personal Site
-
-A modern personal portfolio website built with Next.js and Tailwind CSS.
-
-## Features
-
-- Built with Next.js 14 and App Router
-- Styled with Tailwind CSS
-- Custom fonts (Montserrat and Source Code Pro)
-- Responsive design
-- Dark theme with orange accents
-- Social media links with hover effects
-
 ## Getting Started
 
 First, install the dependencies:
@@ -40,3 +27,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Styling**: Tailwind CSS
 - **Language**: TypeScript
 - **Fonts**: Montserrat, Source Code Pro
+
+## Infrastructure
+
+- **Hosting**: Netlify
+- **Domain**: Squarespace
