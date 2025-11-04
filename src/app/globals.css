@@ -37,14 +37,6 @@
     @apply text-sm font-semibold text-stone-200 tracking-wider mb-2;
   }
 
-  .name-title {
-    font-family: "Rubik Vinyl", serif;
-  }
-
-  .description-text {
-    font-family: "Ovo", serif;
-  }
-
   .lines-container {
     overflow: hidden;
     white-space: nowrap;

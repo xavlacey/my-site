@@ -16,7 +16,7 @@ export default function Home() {
           <Description />
           {/* move all this to Links */}
           <div className="flex items-center gap-6">
-            <Link href="/cv" className="nav-link text-2xl">
+            <Link href="/cv" className="nav-link text-2xl font-body">
               CV
             </Link>
             <Links />
@@ -32,7 +32,7 @@ export default function Home() {
 
 const Name = () => {
   return (
-    <h1 className="name-title pt-24 text-4xl sm:text-5xl md:text-6xl text-stone-100 break-words">
+    <h1 className="font-header pt-14 text-4xl sm:text-5xl md:text-6xl text-stone-100 break-words">
       <span className="text-orange-400">Xav</span>ier Lacey
     </h1>
   );
@@ -40,15 +40,15 @@ const Name = () => {
 
 const Description = () => {
   return (
-    <div className="space-y-4">
+    <div className="font-body space-y-4">
       <p className="body-text description-text break-words">
-        Hi I'm Xav, a software engineer living in Lisbon with eight years'
-        experience building great products specialising in Node.js, TypeScript
-        and React.
+        Hi I&apos;m Xav, a software engineer living in Lisbon with eight
+        years&apos; experience building great products specialising in Node.js,
+        TypeScript and React.
       </p>
       <p className="body-text description-text break-words">
         I like climbing, cycling, camping, cryptic crosswords and some other
-        things that don't begin with 'c'.
+        things that don&apos;t begin with &apos;c&apos;.
       </p>
     </div>
   );

@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-        "source-code-pro": ["Source Code Pro", "monospace"],
+        body: ["Ovo", "serif"],
+        lines: ["Linefont"],
+        header: ["Rubik Vinyl", "sans"],
       },
       colors: {
         "light-orange": "#db991e",

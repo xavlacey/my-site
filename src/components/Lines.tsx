@@ -109,7 +109,7 @@ export default function Lines() {
       <div className="flex items-center gap-4">
         <label
           htmlFor="speed-dial"
-          className="text-stone-300 text-sm whitespace-nowrap"
+          className="font-body text-stone-300 text-sm whitespace-nowrap"
         >
           Speediness:
         </label>
@@ -127,7 +127,7 @@ export default function Lines() {
       <div className="flex items-center gap-4">
         <label
           htmlFor="smoothness-dial"
-          className="text-stone-300 text-sm whitespace-nowrap"
+          className="font-body text-stone-300 text-sm whitespace-nowrap"
         >
           Smoothness:
         </label>
@@ -145,7 +145,7 @@ export default function Lines() {
       <div className="flex items-center gap-4">
         <label
           htmlFor="squareness-dial"
-          className="text-stone-300 text-sm whitespace-nowrap"
+          className="font-body text-stone-300 text-sm whitespace-nowrap"
         >
           Squareness:
         </label>

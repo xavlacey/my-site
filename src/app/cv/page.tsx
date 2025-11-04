@@ -4,16 +4,19 @@ export default function CV() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
       <nav className="max-w-4xl mx-auto px-6 py-6">
-        <Link href="/" className="nav-link inline-flex items-center gap-2">
+        <Link
+          href="/"
+          className="font-body nav-link inline-flex items-center gap-2"
+        >
           ← back
         </Link>
       </nav>
 
       <div className="max-w-4xl mx-auto px-6 pb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-stone-100 mb-12">
+        <h1 className="font-header text-4xl md:text-5xl font-bold text-stone-100 mb-12">
           my cv
         </h1>
-        <div className="flex flex-col gap-8">
+        <div className="font-body flex flex-col gap-8">
           <ExperienceSection
             props={{
               jobTitle: "Senior Software Engineer, Contract",
