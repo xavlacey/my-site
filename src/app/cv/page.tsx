@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CV() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
+    <div className="min-h-screen bg-linear-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
       <nav className="max-w-4xl mx-auto px-6 py-6">
         <Link
           href="/"
@@ -150,7 +150,7 @@ const ExperienceSection = ({ props }: { props: ExperienceProps }) => {
   } = props;
 
   return (
-    <div className="bg-stone-800/50 backdrop-blur-sm rounded-xl shadow-lg border border-stone-700/50 p-6 md:p-8 hover:shadow-xl hover:border-stone-600/50 transition-all">
+    <div className="bg-stone-800/50 backdrop-blur-xs rounded-xl shadow-lg border border-stone-700/50 p-6 md:p-8 hover:shadow-xl hover:border-stone-600/50 transition-all">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
         <h2 className="text-2xl font-bold text-stone-100">{jobTitle}</h2>
         <span className="text-sm text-stone-400 md:text-right whitespace-nowrap">

@@ -1,10 +1,101 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik Vinyl:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ovo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Linefont:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik Vinyl:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap')
+layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Linefont:wght@100;200;300;400;500;600;700;800;900&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --font-body: Ovo, serif;
+  --font-lines: Linefont;
+  --font-header: Rubik Vinyl, sans;
+
+  --color-light-orange: #db991e;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility icon-link {
+  @apply p-2 rounded-lg transition-colors;
+}
+
+@utility body-text {
+  @apply text-xl md:text-2xl text-stone-300 leading-relaxed;
+}
+
+@utility nav-link {
+  @apply text-stone-300 hover:text-orange-400 transition-colors font-medium;
+}
+
+@utility experience-section-title {
+  @apply text-sm font-semibold text-stone-200 tracking-wider mb-2;
+}
+
+@utility lines-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+@utility lines {
+  font-family: 'Linefont', serif;
+  font-weight: 200;
+  white-space: nowrap;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+@utility grain-bg {
+  position: relative;
+
+  /* todo remove */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@utility icon-light {
+  /* TODO change to the right orange on hover */
+  filter: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(365%)
+    hue-rotate(178deg) brightness(93%) contrast(88%);
+
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(64%) sepia(79%) saturate(2574%)
+      hue-rotate(338deg) brightness(101%) contrast(90%);
+  }
+}
 
 @layer base {
   html,
@@ -21,35 +112,6 @@
 }
 
 @layer components {
-  .icon-link {
-    @apply p-2 rounded-lg transition-colors;
-  }
-
-  .body-text {
-    @apply text-xl md:text-2xl text-stone-300 leading-relaxed;
-  }
-
-  .nav-link {
-    @apply text-stone-300 hover:text-orange-400 transition-colors font-medium;
-  }
-
-  .experience-section-title {
-    @apply text-sm font-semibold text-stone-200 tracking-wider mb-2;
-  }
-
-  .lines-container {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-  }
-
-  .lines {
-    font-family: "Linefont", serif;
-    font-weight: 200;
-    white-space: nowrap;
-    font-size: 2rem;
-    line-height: 1.5;
-  }
 
   @keyframes ticker {
     0% {
@@ -58,41 +120,5 @@
     100% {
       transform: translateX(-50%);
     }
-  }
-}
-
-@layer utilities {
-  .grain-bg {
-    position: relative;
-  }
-
-  /* todo remove */
-  .grain-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.05;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .grain-bg > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* TODO change to the right orange on hover */
-  .icon-light {
-    filter: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(365%)
-      hue-rotate(178deg) brightness(93%) contrast(88%);
-  }
-
-  .icon-light:hover {
-    filter: brightness(0) saturate(100%) invert(64%) sepia(79%) saturate(2574%)
-      hue-rotate(338deg) brightness(101%) contrast(90%);
   }
 }

@@ -9,7 +9,7 @@ import Lines from "../components/Lines";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
+    <main className="min-h-screen bg-linear-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
       <section className="max-w-4xl mx-auto px-6 flex flex-col items-center justify-center min-h-screen overflow-x-visible">
         <div className="space-y-8 max-w-2xl w-full">
           <Name />
@@ -32,7 +32,7 @@ export default function Home() {
 
 const Name = () => {
   return (
-    <h1 className="font-header pt-14 text-4xl sm:text-5xl md:text-6xl text-stone-100 break-words">
+    <h1 className="font-header pt-14 text-4xl sm:text-5xl md:text-6xl text-stone-100 wrap-break-word">
       <span className="text-orange-400">Xav</span>ier Lacey
     </h1>
   );
@@ -41,12 +41,12 @@ const Name = () => {
 const Description = () => {
   return (
     <div className="font-body space-y-4">
-      <p className="body-text description-text break-words">
+      <p className="body-text description-text wrap-break-word">
         Hi I&apos;m Xav, a software engineer living in Lisbon with eight
         years&apos; experience building great products specialising in Node.js,
         TypeScript and React.
       </p>
-      <p className="body-text description-text break-words">
+      <p className="body-text description-text wrap-break-word">
         I like climbing, cycling, camping, cryptic crosswords and some other
         things that don&apos;t begin with &apos;c&apos;.
       </p>
