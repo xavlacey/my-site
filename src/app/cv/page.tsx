@@ -13,7 +13,7 @@ export default function CV() {
       </nav>
 
       <div className="max-w-4xl mx-auto px-6 pb-12">
-        <h1 className="font-header text-4xl md:text-5xl font-bold text-stone-100 mb-12">
+        <h1 className="font-header text-4xl md:text-5xl font-bold text-stone-100 mb-6">
           my cv
         </h1>
         <div className="font-body flex flex-col gap-8">
@@ -150,7 +150,7 @@ const ExperienceSection = ({ props }: { props: ExperienceProps }) => {
   } = props;
 
   return (
-    <div className="bg-stone-800/50 backdrop-blur-xs rounded-xl shadow-lg border border-stone-700/50 p-6 md:p-8 hover:shadow-xl hover:border-stone-600/50 transition-all">
+    <div className="bg-stone-800/50 backdrop-blur-xs rounded-xl shadow-lg  p-6 md:p-8 hover:shadow-xl hover:border-stone-600/50 transition-all">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
         <h2 className="text-2xl font-bold text-stone-100">{jobTitle}</h2>
         <span className="text-sm text-stone-400 md:text-right whitespace-nowrap">

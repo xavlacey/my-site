@@ -105,63 +105,65 @@ export default function Lines() {
   }, [speed, smoothness, squareness]);
 
   return (
-    <div className="w-full space-y-4">
-      <div className="flex items-center gap-4">
-        <label
-          htmlFor="speed-dial"
-          className="font-body text-stone-300 text-sm whitespace-nowrap"
-        >
-          Speediness:
-        </label>
-        <input
-          id="speed-dial"
-          type="range"
-          min="1"
-          max="100"
-          step="1"
-          value={101 - speed}
-          onChange={(e) => setSpeed(101 - Number(e.target.value))}
-          className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
-        />
-      </div>
-      <div className="flex items-center gap-4">
-        <label
-          htmlFor="smoothness-dial"
-          className="font-body text-stone-300 text-sm whitespace-nowrap"
-        >
-          Smoothness:
-        </label>
-        <input
-          id="smoothness-dial"
-          type="range"
-          min="0"
-          max="100"
-          step="1"
-          value={smoothness}
-          onChange={(e) => setSmoothness(Number(e.target.value))}
-          className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
-        />
-      </div>
-      <div className="flex items-center gap-4">
-        <label
-          htmlFor="squareness-dial"
-          className="font-body text-stone-300 text-sm whitespace-nowrap"
-        >
-          Squareness:
-        </label>
-        <input
-          id="squareness-dial"
-          type="range"
-          min="0"
-          max="100"
-          step="1"
-          value={squareness}
-          onChange={(e) => setSquareness(Number(e.target.value))}
-          className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
-        />
-      </div>
-      <div className="lines-container w-full overflow-hidden">
-        <p className="lines text-stone-300">{text}</p>
+    <div className="w-full max-w-4xl mt-8">
+      <div className="w-full space-y-4">
+        <div className="flex items-center gap-4">
+          <label
+            htmlFor="speed-dial"
+            className="font-body text-stone-300 text-sm whitespace-nowrap"
+          >
+            Speediness:
+          </label>
+          <input
+            id="speed-dial"
+            type="range"
+            min="1"
+            max="100"
+            step="1"
+            value={101 - speed}
+            onChange={(e) => setSpeed(101 - Number(e.target.value))}
+            className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
+          />
+        </div>
+        <div className="flex items-center gap-4">
+          <label
+            htmlFor="smoothness-dial"
+            className="font-body text-stone-300 text-sm whitespace-nowrap"
+          >
+            Smoothness:
+          </label>
+          <input
+            id="smoothness-dial"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value={smoothness}
+            onChange={(e) => setSmoothness(Number(e.target.value))}
+            className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
+          />
+        </div>
+        <div className="flex items-center gap-4">
+          <label
+            htmlFor="squareness-dial"
+            className="font-body text-stone-300 text-sm whitespace-nowrap"
+          >
+            Squareness:
+          </label>
+          <input
+            id="squareness-dial"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value={squareness}
+            onChange={(e) => setSquareness(Number(e.target.value))}
+            className="flex-1 h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-orange-400"
+          />
+        </div>
+        <div className="lines-container w-full overflow-hidden">
+          <p className="lines text-stone-300">{text}</p>
+        </div>
       </div>
     </div>
   );
