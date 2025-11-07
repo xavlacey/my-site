@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import downloadIcon from "../../download.svg";
 
 export default function CV() {
   return (
@@ -13,9 +15,26 @@ export default function CV() {
       </nav>
 
       <div className="max-w-4xl mx-auto px-6 pb-12">
-        <h1 className="font-header text-4xl md:text-5xl font-bold text-stone-100 mb-6">
-          my cv
-        </h1>
+        <div className="flex items-center gap-4 mb-6">
+          <h1 className="font-header text-4xl md:text-5xl font-bold text-stone-100">
+            my cv
+          </h1>
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link inline-flex items-center"
+            aria-label="Download CV as PDF"
+          >
+            <Image
+              src={downloadIcon}
+              alt="download"
+              width={24}
+              height={24}
+              className="icon-light"
+            />
+          </a>
+        </div>
         <div className="font-body flex flex-col gap-8">
           <ExperienceSection
             props={{
