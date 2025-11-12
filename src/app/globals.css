@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Special Elite&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Linefont:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400&display=swap");
 
 @import "tailwindcss";
 
 @theme {
-  --font-body: Libre Baskerville, serif;
-  --font-lines: Linefont;
-  --font-header: Special Elite, serif;
+  --font-body: Merriweather, serif;
+  --font-header: Shrikhand, serif;
   --font-cv: Fredoka, sans-serif;
+  --font-lines: Linefont;
 
   --color-light-orange: #db991e;
 }
@@ -85,13 +85,12 @@
 }
 
 @utility icon-light {
-  /* TODO change to the right orange on hover */
   filter: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(365%)
     hue-rotate(178deg) brightness(93%) contrast(88%);
 
   &:hover {
-    filter: brightness(0) saturate(100%) invert(64%) sepia(79%) saturate(2574%)
-      hue-rotate(338deg) brightness(101%) contrast(90%);
+    filter: brightness(0) saturate(100%) invert(66%) sepia(85%) saturate(2218%)
+      hue-rotate(352deg) brightness(102%) contrast(97%);
   }
 }
 
