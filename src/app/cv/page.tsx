@@ -29,8 +29,8 @@ export default function CV() {
             <Image
               src={downloadIcon}
               alt="download"
-              width={24}
-              height={24}
+              width={30}
+              height={30}
               className="icon-light"
             />
           </a>
@@ -52,10 +52,15 @@ export default function CV() {
                 "AWS",
                 "MongoDB",
                 "SST",
+                "Vercel",
+                "Tailwind",
+                "tRPC",
+                "Prisma",
+                "Algolia",
               ],
               responsibilities: [
-                "Delivered a brand new marketplace product from conception to launch as part of a small, cross-functional team.",
-                "Maintained and enhanced a bespoke audit application, ensuring reliability and performance for existing users",
+                "Delivered a brand new marketplace platform for the reselling of construction materials from conception to launch as part of a small, cross-functional team.",
+                "Maintained and enhanced a bespoke audit application, ensuring reliability and performance for existing users.",
                 "Worked autonomously in a startup environment, balancing multiple product streams and adapting quickly to evolving business needs.",
               ],
             }}
