@@ -2,6 +2,30 @@ import Link from "next/link";
 import Image from "next/image";
 import downloadIcon from "../../download.svg";
 
+const TECH_STACK = {
+  NODEJS: "Node.js",
+  TYPESCRIPT: "TypeScript",
+  NEXTJS: "Next.js",
+  REACT: "React",
+  MONGODB: "MongoDB",
+  PRISMA: "Prisma",
+  POSTGRESQL: "PostgreSQL",
+  AWS: "AWS",
+  SST: "SST",
+  VERCEL: "Vercel",
+  TAILWIND: "Tailwind",
+  TRPC: "tRPC",
+  ALGOLIA: "Algolia",
+  GRAPHQL: "GraphQL",
+  DOCKER: "Docker",
+  OMNI_BI: "Omni BI",
+  REDUX: "Redux",
+  RUBY: "Ruby",
+  RUBY_ON_RAILS: "Ruby on Rails",
+  SIDEKIQ: "Sidekiq",
+  JAVASCRIPT: "JavaScript",
+} as const;
+
 export default function CV() {
   return (
     <div className="min-h-screen bg-linear-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
@@ -45,23 +69,25 @@ export default function CV() {
               description:
                 "Full-stack engineer at a circular economy company, focused on reducing construction waste.",
               stack: [
-                "Node.js",
-                "TypeScript",
-                "React",
-                "PostgreSQL",
-                "AWS",
-                "MongoDB",
-                "SST",
-                "Vercel",
-                "Tailwind",
-                "tRPC",
-                "Prisma",
-                "Algolia",
+                TECH_STACK.NODEJS,
+                TECH_STACK.TYPESCRIPT,
+                TECH_STACK.NEXTJS,
+                TECH_STACK.REACT,
+                TECH_STACK.MONGODB,
+                TECH_STACK.PRISMA,
+                TECH_STACK.POSTGRESQL,
+                TECH_STACK.AWS,
+                TECH_STACK.SST,
+                TECH_STACK.VERCEL,
+                TECH_STACK.TAILWIND,
+                TECH_STACK.TRPC,
+                TECH_STACK.ALGOLIA,
               ],
               responsibilities: [
-                "Delivered a brand new marketplace platform for the reselling of construction materials from conception to launch as part of a small, cross-functional team.",
-                "Maintained and enhanced a bespoke audit application, ensuring reliability and performance for existing users.",
-                "Worked autonomously in a startup environment, balancing multiple product streams and adapting quickly to evolving business needs.",
+                "Built and launched a construction materials resale marketplace from the ground up, collaborating within a cross-functional team to establish a platform handling 1,000+ product listings.",
+                "Maintained and enhanced a bespoke material audit and cataloguing application handling 100,000+ assets via a tRPC API, optimising performance and reliability while scaling product to support expanding number of assets.",
+                "Collaborated with C-suite stakeholders to design and implement a role-based permissions system that simplified access management while enhancing security across the platform.",
+                "Partnered with leadership to redefine user access flows and authentication journeys, reducing friction points and enhancing user experience.",
               ],
             }}
           />
@@ -75,17 +101,17 @@ export default function CV() {
               description:
                 "Backend engineer at a climate tech company, working across platform and product teams.",
               stack: [
-                "Node.js",
-                "TypeScript",
-                "GraphQL",
-                "PostgreSQL",
-                "AWS",
-                "Docker",
-                "Omni BI",
+                TECH_STACK.NODEJS,
+                TECH_STACK.TYPESCRIPT,
+                TECH_STACK.GRAPHQL,
+                TECH_STACK.POSTGRESQL,
+                TECH_STACK.AWS,
+                TECH_STACK.DOCKER,
+                TECH_STACK.OMNI_BI,
               ],
               responsibilities: [
                 "Designed, developed, and managed RESTful and GraphQL APIs in TypeScript delivering user-focused solutions for both internal and external stakeholders.",
-                "Tech lead for a new product that successfully delivered on-time, connected our clients with 200 developers and suppliers, and significantly enhanced client engagement.",
+                "Tech lead for a new product that successfully delivered on-time, connected our clients with 200+ developers and suppliers, and significantly enhanced client engagement.",
                 "Initiated weekly communication between teams to align system architecture and technical solutions, and achieve project goals.",
                 "Took initiative to build a business intelligence dashboard used by multiple teams to resolve internal bottlenecks and streamline product processes.",
                 "Spearheaded and facilitated key discussions on engineering standards, including leading a workshop that promoted best practices in testing, database design and code structure; fostered a culture of technical excellence.",
@@ -103,15 +129,15 @@ export default function CV() {
               description:
                 "Full-stack engineer at e-commerce startup. Joined as the seventh employee, contributing significantly to the company’s growth through multiple product and team development phases.",
               stack: [
-                "Node.js",
-                "TypeScript",
-                "PostgreSQL",
-                "React",
-                "Redux",
-                "Ruby",
-                "Ruby on Rails",
-                "Sidekiq",
-                "AWS",
+                TECH_STACK.NODEJS,
+                TECH_STACK.TYPESCRIPT,
+                TECH_STACK.POSTGRESQL,
+                TECH_STACK.REACT,
+                TECH_STACK.REDUX,
+                TECH_STACK.RUBY,
+                TECH_STACK.RUBY_ON_RAILS,
+                TECH_STACK.SIDEKIQ,
+                TECH_STACK.AWS,
               ],
               responsibilities: [
                 "Delivered features end-to-end across public RESTful Node.js/React and Ruby on Rails applications, enhancing platform capabilities and user experience.",
@@ -129,7 +155,7 @@ export default function CV() {
               company: "The Education Hub Group",
               description:
                 "Node.js backend developer responsible for building and maintaining the API for our bespoke platform for schools.",
-              stack: ["Node.js", "JavaScript"],
+              stack: [TECH_STACK.NODEJS, TECH_STACK.JAVASCRIPT],
               responsibilities: [
                 "Second employee and developed the idea into a fully-functioning web app.",
               ],

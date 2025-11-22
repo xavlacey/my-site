@@ -34,9 +34,9 @@ const Description = () => {
   return (
     <div className="font-body space-y-2">
       <p className="body-text wrap-break-word">
-        Hi I’m Xav, a software engineer living in Lisbon with eight years’
-        experience building great products specialising in Node.js, TypeScript
-        and React.
+        Hi I’m Xav, a user-focused software engineer living in Lisbon with eight
+        years’ experience building great products specialising in Node.js,
+        TypeScript and React.
       </p>
       <p className="body-text wrap-break-word">
         I like climbing, cycling, camping, cryptic crosswords and some other
