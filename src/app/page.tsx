@@ -24,7 +24,7 @@ export default function Home() {
 
 const Name = () => {
   return (
-    <h1 className="font-header pt-14 text-5xl md:text-6xl text-stone-100 wrap-break-word">
+    <h1 className="font-header pt-14 text-4xl sm:text-5xl md:text-6xl text-stone-100 wrap-break-word">
       <span className="text-orange-400">Xav</span>ier Lacey
     </h1>
   );
@@ -32,13 +32,13 @@ const Name = () => {
 
 const Description = () => {
   return (
-    <div className="font-body space-y-2">
-      <p className="body-text wrap-break-word">
+    <div className="font-body space-y-2 ">
+      <p className="body-text wrap-break-word text-sm sm:text-base">
         Hi I’m Xav, a user-focused software engineer living in Lisbon with eight
         years’ experience building great products specialising in Node.js,
         TypeScript and React.
       </p>
-      <p className="body-text wrap-break-word">
+      <p className="body-text wrap-break-word text-sm sm:text-base">
         I like climbing, cycling, camping, cryptic crosswords and some other
         things that don’t begin with ‘c’.
       </p>
