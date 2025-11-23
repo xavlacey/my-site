@@ -37,7 +37,7 @@
 }
 
 @utility body-text {
-  @apply text-lg text-stone-300 leading-relaxed;
+  @apply text-stone-300 leading-relaxed;
 }
 
 @utility nav-link {

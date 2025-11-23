@@ -24,7 +24,7 @@ export default function Home() {
 
 const Name = () => {
   return (
-    <h1 className="font-header pt-14 text-4xl sm:text-5xl md:text-6xl text-stone-100 wrap-break-word">
+    <h1 className="font-header pt-14 text-4xl sm:text-6xl text-stone-100 wrap-break-word">
       <span className="text-orange-400">Xav</span>ier Lacey
     </h1>
   );

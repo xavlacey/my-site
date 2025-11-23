@@ -40,7 +40,7 @@ export default function CV() {
 
       <div className="max-w-4xl mx-auto px-6 pb-12">
         <div className="flex items-center gap-4 mb-6">
-          <h1 className="font-header text-4xl md:text-5xl font-thin text-stone-100">
+          <h1 className="font-header text-4xl sm:text-6xl font-thin text-stone-100">
             my cv
           </h1>
           <a
@@ -234,7 +234,7 @@ const ExperienceSection = ({ props }: { props: ExperienceProps }) => {
               return (
                 <li
                   key={index}
-                  className="text-stone-300 leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-orange-400"
+                  className="body-text text-stone-300 leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-orange-400"
                 >
                   {r}
                 </li>

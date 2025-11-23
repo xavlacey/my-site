@@ -108,7 +108,7 @@ export default function Lines() {
   }, [speed, smoothness, squareness]);
 
   return (
-    <div className="w-full max-w-4xl mt-8 group">
+    <div className="w-full max-w-4xl mt-4 group">
       <div className="w-full space-y-4">
         <SpeedinessSlider speed={speed} setSpeed={setSpeed} />
         <SmoothnessSlider
