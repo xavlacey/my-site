@@ -39,8 +39,8 @@ const Description = () => {
         TypeScript and React.
       </p>
       <p className="body-text wrap-break-word text-sm sm:text-base">
-        I like climbing, cycling, camping, cryptic crosswords and some other
-        things that don’t begin with ‘c’.
+        I am passionate about the climate, climbing, cycling, camping, cryptic
+        crosswords and some other things that don’t begin with ‘c’.
       </p>
     </div>
   );
