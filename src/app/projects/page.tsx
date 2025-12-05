@@ -43,6 +43,21 @@ export default function Projects() {
           />
           <ProjectCard
             props={{
+              name: "The Impossible Quiz",
+              techStack: [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind",
+                "Vercel",
+              ],
+              description:
+                "A website I made to help automate a quiz that my dad runs every Christmas.",
+              link: "https://impossiblequizxl.vercel.app/",
+            }}
+          />
+          <ProjectCard
+            props={{
               name: "Personal Website",
               techStack: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
               description:
