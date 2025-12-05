@@ -52,8 +52,9 @@ const Links = () => {
       <Link href="/cv" className="nav-link font-normal text-2xl font-cv">
         CV
       </Link>
-      <Link href="/personal-projects" className="nav-link font-normal text-2xl font-cv">
-        Personal Projects
+      <div className="w-px h-6 bg-stone-400"></div>
+      <Link href="/projects" className="nav-link font-normal text-2xl font-cv">
+        Projects
       </Link>
       <div className="w-px h-6 bg-stone-400"></div>
       <div className="flex gap-4">

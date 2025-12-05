@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 
 type Font = "Linefont" | "Merriweather";
 
 export default function Lines() {
   const [text, setText] = useState("");
   const [speed, setSpeed] = useState(50);
-  const [smoothness, setSmoothness] = useState(0);
+  const [smoothness, setSmoothness] = useState(100);
   const [squareness, setSquareness] = useState(0);
   const [offset, setOffset] = useState(0);
   const [font, setFont] = useState<Font>("Linefont");
@@ -161,7 +161,7 @@ function FontSelector({
     <div className="flex justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
       <div className="flex gap-2 items-center font-body text-xs">
         {fontOptions.map(({ value, label }, index) => (
-          <>
+          <Fragment key={`font-selector-${index}`}>
             {index > 0 && (
               <span className="text-stone-500" key={`separator-${index}`}>
                 |
@@ -178,7 +178,7 @@ function FontSelector({
             >
               {label}
             </button>
-          </>
+          </Fragment>
         ))}
       </div>
     </div>

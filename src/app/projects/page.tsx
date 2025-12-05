@@ -14,34 +14,40 @@ export default function Projects() {
 
       <div className="max-w-4xl mx-auto px-6 pb-12">
         <h1 className="font-header text-4xl sm:text-6xl font-thin text-stone-100 mb-6">
-          projects
+          personal <span className="text-orange-400">projects</span>
         </h1>
         <div className="font-body flex flex-col gap-8">
           <ProjectCard
             props={{
-              name: "Example Project",
-              techStack: ["React", "TypeScript", "Node.js"],
+              name: "Katakana Game",
+              techStack: ["Python", "Django", "Railway"],
               description:
-                "A brief description of what this project does and why you built it.",
-              link: "https://github.com/yourusername/project",
+                "A simple web-based game for testing knowledge of Japanese Katakana characters in a fun and interactive way.",
+              link: "https://katakana-game.up.railway.app",
             }}
           />
           <ProjectCard
             props={{
-              name: "Example Project",
-              techStack: ["React", "TypeScript", "Node.js"],
+              name: "Taproom Champions",
+              techStack: [
+                "React",
+                "TypeScript",
+                "Node.js",
+                "Tailwind",
+                "Vercel",
+              ],
               description:
-                "A brief description of what this project does and why you built it.",
-              link: "https://github.com/yourusername/project",
+                "A way to keep track of your favourite taprooms and breweries.",
+              link: "https://taproom-champions.vercel.app",
             }}
           />
           <ProjectCard
             props={{
-              name: "Example Project",
-              techStack: ["React", "TypeScript", "Node.js"],
+              name: "Personal Website",
+              techStack: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
               description:
-                "A brief description of what this project does and why you built it.",
-              link: "https://github.com/yourusername/project",
+                "My personal website built with Next.js and Tailwind. Features squiggly lines.",
+              link: "https://www.xavierlacey.com",
             }}
           />
         </div>

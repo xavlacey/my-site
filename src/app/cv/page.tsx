@@ -41,7 +41,7 @@ export default function CV() {
       <div className="max-w-4xl mx-auto px-6 pb-12">
         <div className="flex items-center gap-4 mb-6">
           <h1 className="font-header text-4xl sm:text-6xl font-thin text-stone-100">
-            my cv
+            my <span className="text-orange-400">cv</span>
           </h1>
           <a
             href="/cv.pdf"
@@ -211,7 +211,6 @@ const ExperienceSection = ({ props }: { props: ExperienceProps }) => {
       <p className="text-stone-300 leading-relaxed mb-4">{description}</p>
       {stack && (
         <div className="mb-4">
-          <h4 className="experience-section-title">Tech stack</h4>
           <div className="flex flex-wrap gap-2">
             {stack.map((s: string, index: number) => {
               return (
@@ -228,7 +227,6 @@ const ExperienceSection = ({ props }: { props: ExperienceProps }) => {
       )}
       {responsibilities && (
         <div>
-          <h4 className="experience-section-title">Responsibilities</h4>
           <ul>
             {responsibilities.map((r: string, index: number) => {
               return (
