@@ -1,30 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import downloadIcon from "../../download.svg";
-
-const TECH_STACK = {
-  NODEJS: "Node.js",
-  TYPESCRIPT: "TypeScript",
-  NEXTJS: "Next.js",
-  REACT: "React",
-  MONGODB: "MongoDB",
-  PRISMA: "Prisma",
-  POSTGRESQL: "PostgreSQL",
-  AWS: "AWS",
-  SST: "SST",
-  VERCEL: "Vercel",
-  TAILWIND: "Tailwind",
-  TRPC: "tRPC",
-  ALGOLIA: "Algolia",
-  GRAPHQL: "GraphQL",
-  DOCKER: "Docker",
-  OMNI_BI: "Omni BI",
-  REDUX: "Redux",
-  RUBY: "Ruby",
-  RUBY_ON_RAILS: "Ruby on Rails",
-  SIDEKIQ: "Sidekiq",
-  JAVASCRIPT: "JavaScript",
-} as const;
+import { TECH_STACK } from "../../constants/techStack";
 
 export default function CV() {
   return (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TECH_STACK } from "../../constants/techStack";
 
 export default function Projects() {
   return (
@@ -19,22 +20,14 @@ export default function Projects() {
         <div className="font-body flex flex-col gap-8">
           <ProjectCard
             props={{
-              name: "Katakana Game",
-              techStack: ["Python", "Django", "Railway"],
-              description:
-                "A simple web-based game for testing knowledge of Japanese Katakana characters in a fun and interactive way.",
-              link: "https://katakana-game.up.railway.app",
-            }}
-          />
-          <ProjectCard
-            props={{
               name: "Taproom Champions",
               techStack: [
-                "React",
-                "TypeScript",
-                "Node.js",
-                "Tailwind",
-                "Vercel",
+                TECH_STACK.REACT,
+                TECH_STACK.TYPESCRIPT,
+                TECH_STACK.NODEJS,
+                TECH_STACK.DRIZZLE,
+                TECH_STACK.TAILWIND,
+                TECH_STACK.VERCEL,
               ],
               description:
                 "A way to keep track of your favourite taprooms and breweries.",
@@ -43,13 +36,29 @@ export default function Projects() {
           />
           <ProjectCard
             props={{
+              name: "Katakana Game",
+              techStack: [
+                TECH_STACK.PYTHON,
+                TECH_STACK.DJANGO,
+                TECH_STACK.RAILWAY,
+              ],
+              description:
+                "A simple game for testing knowledge of Japanese Katakana characters in a fun and interactive way.",
+              link: "https://katakana-game.up.railway.app",
+            }}
+          />
+          <ProjectCard
+            props={{
               name: "The Impossible Quiz",
               techStack: [
-                "Next.js",
-                "React",
-                "TypeScript",
-                "Tailwind",
-                "Vercel",
+                TECH_STACK.NEXTJS,
+                TECH_STACK.REACT,
+                TECH_STACK.TYPESCRIPT,
+                TECH_STACK.TAILWIND,
+                TECH_STACK.PRISMA,
+                TECH_STACK.PUSHER,
+                TECH_STACK.BUN,
+                TECH_STACK.VERCEL,
               ],
               description:
                 "A website I made to help automate a quiz that my dad runs every Christmas.",
@@ -59,7 +68,12 @@ export default function Projects() {
           <ProjectCard
             props={{
               name: "Personal Website",
-              techStack: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
+              techStack: [
+                TECH_STACK.NEXTJS,
+                TECH_STACK.TYPESCRIPT,
+                TECH_STACK.TAILWIND,
+                TECH_STACK.VERCEL,
+              ],
               description:
                 "My personal website built with Next.js and Tailwind. Features squiggly lines.",
               link: "https://www.xavierlacey.com",
