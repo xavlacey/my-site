@@ -38,13 +38,14 @@ export default function Projects() {
             props={{
               name: "Katakana Game",
               techStack: [
-                TECH_STACK.PYTHON,
-                TECH_STACK.DJANGO,
-                TECH_STACK.RAILWAY,
+                TECH_STACK.DENO,
+                TECH_STACK.FRESH,
+                TECH_STACK.PREACT,
+                TECH_STACK.TYPESCRIPT,
               ],
               description:
                 "A simple game for testing knowledge of Japanese Katakana characters in a fun and interactive way.",
-              link: "https://katakana-game.up.railway.app",
+              link: "https://katakana-game.xavlar.deno.net",
             }}
           />
           <ProjectCard
