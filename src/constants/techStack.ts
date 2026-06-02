@@ -29,4 +29,6 @@ export const TECH_STACK = {
   RAILWAY: "Railway",
   PUSHER: "Pusher",
   BUN: "Bun",
+  REACT_NATIVE: "React Native",
+  EXPO: "Expo",
 } as const;

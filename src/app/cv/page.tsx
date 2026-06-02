@@ -1,223 +1,244 @@
-import Link from "next/link";
 import Image from "next/image";
-import downloadIcon from "../../download.svg";
+import Link from "next/link";
 import { TECH_STACK } from "../../constants/techStack";
+import downloadIcon from "../../download.svg";
 
 export default function CV() {
-  return (
-    <div className="min-h-screen bg-linear-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
-      <nav className="max-w-4xl mx-auto px-6 py-6">
-        <Link
-          href="/"
-          className="font-body nav-link inline-flex items-center gap-2"
-        >
-          ← back
-        </Link>
-      </nav>
+	return (
+		<div className="min-h-screen bg-linear-to-br from-stone-900 via-stone-800 to-stone-900 grain-bg">
+			<nav className="max-w-4xl mx-auto px-6 py-6">
+				<Link
+					href="/"
+					className="font-body nav-link inline-flex items-center gap-2"
+				>
+					← back
+				</Link>
+			</nav>
 
-      <div className="max-w-4xl mx-auto px-6 pb-12">
-        <div className="flex items-center gap-4 mb-6">
-          <h1 className="font-header text-4xl sm:text-6xl font-thin text-stone-100">
-            my <span className="text-orange-400">cv</span>
-          </h1>
-          <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-link inline-flex items-center"
-            aria-label="Download CV as PDF"
-          >
-            <Image
-              src={downloadIcon}
-              alt="download"
-              width={30}
-              height={30}
-              className="icon-light"
-            />
-          </a>
-        </div>
-        <div className="font-body flex flex-col gap-8">
-          <ExperienceSection
-            props={{
-              jobTitle: "Senior Software Engineer, Contract",
-              startDate: "Jan 2025",
-              endDate: "Present",
-              company: "Material Index",
-              description:
-                "Full-stack engineer at a circular economy company, focused on reducing construction waste.",
-              stack: [
-                TECH_STACK.NODEJS,
-                TECH_STACK.TYPESCRIPT,
-                TECH_STACK.NEXTJS,
-                TECH_STACK.REACT,
-                TECH_STACK.MONGODB,
-                TECH_STACK.PRISMA,
-                TECH_STACK.POSTGRESQL,
-                TECH_STACK.AWS,
-                TECH_STACK.SST,
-                TECH_STACK.VERCEL,
-                TECH_STACK.TAILWIND,
-                TECH_STACK.TRPC,
-                TECH_STACK.ALGOLIA,
-              ],
-              responsibilities: [
-                "Built and launched a construction materials resale marketplace from the ground up, collaborating within a cross-functional team to establish a platform handling 1,000+ product listings.",
-                "Maintained and enhanced a bespoke material audit and cataloguing application handling 100,000+ assets via a tRPC API, optimising performance and reliability while scaling product to support expanding number of assets.",
-                "Collaborated with C-suite stakeholders to design and implement a role-based permissions system that simplified access management while enhancing security across the platform.",
-                "Partnered with leadership to redefine user access flows and authentication journeys, reducing friction points and enhancing user experience.",
-              ],
-            }}
-          />
+			<div className="max-w-4xl mx-auto px-6 pb-12">
+				<div className="flex items-center gap-4 mb-6">
+					<h1 className="font-header text-4xl sm:text-6xl font-thin text-stone-100">
+						my <span className="text-orange-400">cv</span>
+					</h1>
+					<a
+						href="/cv.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="nav-link inline-flex items-center"
+						aria-label="Download CV as PDF"
+					>
+						<Image
+							src={downloadIcon}
+							alt="download"
+							width={30}
+							height={30}
+							className="icon-light"
+						/>
+					</a>
+				</div>
+				<div className="font-body flex flex-col gap-8">
+					<ExperienceSection
+						props={{
+							jobTitle: "Senior Software Engineer, Contract",
+							startDate: "Jan 2026",
+							endDate: "Present",
+							company: "Atomic Innovation",
+							description:
+								"Consulting engineer at a global fintech company. Working on revamp of the mobile app used by 10,000+ users.",
+							stack: [
+								TECH_STACK.REACT_NATIVE,
+								TECH_STACK.TYPESCRIPT,
+								TECH_STACK.EXPO,
+								TECH_STACK.TAILWIND,
+								TECH_STACK.BUN,
+							],
+							responsibilities: [
+								"Built new mobile primitives and components to a strict design system.",
+								"Led design and architecture of announcement feature, viewed by 2,000+ users a week.",
+							],
+						}}
+					/>
+					<ExperienceSection
+						props={{
+							jobTitle: "Senior Software Engineer, Contract",
+							startDate: "Jan 2025",
+							endDate: "Jan 2026",
+							company: "Material Index",
+							description:
+								"Full-stack engineer at a circular economy company, focused on reducing construction waste.",
+							stack: [
+								TECH_STACK.NODEJS,
+								TECH_STACK.TYPESCRIPT,
+								TECH_STACK.NEXTJS,
+								TECH_STACK.REACT,
+								TECH_STACK.MONGODB,
+								TECH_STACK.PRISMA,
+								TECH_STACK.POSTGRESQL,
+								TECH_STACK.AWS,
+								TECH_STACK.SST,
+								TECH_STACK.VERCEL,
+								TECH_STACK.TAILWIND,
+								TECH_STACK.TRPC,
+								TECH_STACK.ALGOLIA,
+							],
+							responsibilities: [
+								"Built and launched a construction materials resale marketplace from the ground up, collaborating within a cross-functional team to establish a platform handling 1,000+ product listings.",
+								"Maintained and enhanced a bespoke material audit and cataloguing application handling 100,000+ assets via a tRPC API, optimising performance and reliability while scaling product to support expanding number of assets.",
+								"Collaborated with C-suite stakeholders to design and implement a role-based permissions system that simplified access management while enhancing security across the platform.",
+								"Partnered with leadership to redefine user access flows and authentication journeys, reducing friction points and enhancing user experience.",
+							],
+						}}
+					/>
 
-          <ExperienceSection
-            props={{
-              jobTitle: "Backend Software Engineer",
-              startDate: "August 2022",
-              endDate: "December 2024",
-              company: "Sylvera",
-              description:
-                "Backend engineer at a climate tech company, working across platform and product teams.",
-              stack: [
-                TECH_STACK.NODEJS,
-                TECH_STACK.TYPESCRIPT,
-                TECH_STACK.GRAPHQL,
-                TECH_STACK.POSTGRESQL,
-                TECH_STACK.AWS,
-                TECH_STACK.DOCKER,
-                TECH_STACK.OMNI_BI,
-              ],
-              responsibilities: [
-                "Designed, developed, and managed RESTful and GraphQL APIs in TypeScript delivering user-focused solutions for both internal and external stakeholders.",
-                "Tech lead for a new product that successfully delivered on-time, connected our clients with 200+ developers and suppliers, and significantly enhanced client engagement.",
-                "Initiated weekly communication between teams to align system architecture and technical solutions, and achieve project goals.",
-                "Took initiative to build a business intelligence dashboard used by multiple teams to resolve internal bottlenecks and streamline product processes.",
-                "Spearheaded and facilitated key discussions on engineering standards, including leading a workshop that promoted best practices in testing, database design and code structure; fostered a culture of technical excellence.",
-                "Led many technical interviews; redesigned the coding challenge and encouraged a fairer interview process.",
-              ],
-            }}
-          />
+					<ExperienceSection
+						props={{
+							jobTitle: "Backend Software Engineer",
+							startDate: "August 2022",
+							endDate: "December 2024",
+							company: "Sylvera",
+							description:
+								"Backend engineer at a climate tech company, working across platform and product teams.",
+							stack: [
+								TECH_STACK.NODEJS,
+								TECH_STACK.TYPESCRIPT,
+								TECH_STACK.GRAPHQL,
+								TECH_STACK.POSTGRESQL,
+								TECH_STACK.AWS,
+								TECH_STACK.DOCKER,
+								TECH_STACK.OMNI_BI,
+							],
+							responsibilities: [
+								"Designed, developed, and managed RESTful and GraphQL APIs in TypeScript delivering user-focused solutions for both internal and external stakeholders.",
+								"Tech lead for a new product that successfully delivered on-time, connected our clients with 200+ developers and suppliers, and significantly enhanced client engagement.",
+								"Initiated weekly communication between teams to align system architecture and technical solutions, and achieve project goals.",
+								"Took initiative to build a business intelligence dashboard used by multiple teams to resolve internal bottlenecks and streamline product processes.",
+								"Spearheaded and facilitated key discussions on engineering standards, including leading a workshop that promoted best practices in testing, database design and code structure; fostered a culture of technical excellence.",
+								"Led many technical interviews; redesigned the coding challenge and encouraged a fairer interview process.",
+							],
+						}}
+					/>
 
-          <ExperienceSection
-            props={{
-              jobTitle: "Full-Stack Software Engineer",
-              startDate: "August 2017",
-              endDate: "July 2022",
-              company: "LoyaltyLion",
-              description:
-                "Full-stack engineer at e-commerce startup. Joined as the seventh employee, contributing significantly to the company’s growth through multiple product and team development phases.",
-              stack: [
-                TECH_STACK.NODEJS,
-                TECH_STACK.TYPESCRIPT,
-                TECH_STACK.POSTGRESQL,
-                TECH_STACK.REACT,
-                TECH_STACK.REDUX,
-                TECH_STACK.RUBY,
-                TECH_STACK.RUBY_ON_RAILS,
-                TECH_STACK.SIDEKIQ,
-                TECH_STACK.AWS,
-              ],
-              responsibilities: [
-                "Delivered features end-to-end across public RESTful Node.js/React and Ruby on Rails applications, enhancing platform capabilities and user experience.",
-                "Proactively optimised team workflows and documentation, streamlining development processes and improving cross-functional collaboration.",
-                "Automated documentation quality checks by integrating a doc linting tool into the build pipeline enhancing client-facing API documentation quality.",
-              ],
-            }}
-          />
+					<ExperienceSection
+						props={{
+							jobTitle: "Full-Stack Software Engineer",
+							startDate: "August 2017",
+							endDate: "July 2022",
+							company: "LoyaltyLion",
+							description:
+								"Full-stack engineer at e-commerce startup. Joined as the seventh employee, contributing significantly to the company’s growth through multiple product and team development phases.",
+							stack: [
+								TECH_STACK.NODEJS,
+								TECH_STACK.TYPESCRIPT,
+								TECH_STACK.POSTGRESQL,
+								TECH_STACK.REACT,
+								TECH_STACK.REDUX,
+								TECH_STACK.RUBY,
+								TECH_STACK.RUBY_ON_RAILS,
+								TECH_STACK.SIDEKIQ,
+								TECH_STACK.AWS,
+							],
+							responsibilities: [
+								"Delivered features end-to-end across public RESTful Node.js/React and Ruby on Rails applications, enhancing platform capabilities and user experience.",
+								"Proactively optimised team workflows and documentation, streamlining development processes and improving cross-functional collaboration.",
+								"Automated documentation quality checks by integrating a doc linting tool into the build pipeline enhancing client-facing API documentation quality.",
+							],
+						}}
+					/>
 
-          <ExperienceSection
-            props={{
-              jobTitle: "Software Developer",
-              startDate: "September 2016",
-              endDate: "July 2017",
-              company: "The Education Hub Group",
-              description:
-                "Node.js backend developer responsible for building and maintaining the API for our bespoke platform for schools.",
-              stack: [TECH_STACK.NODEJS, TECH_STACK.JAVASCRIPT],
-              responsibilities: [
-                "Second employee and developed the idea into a fully-functioning web app.",
-              ],
-            }}
-          />
+					<ExperienceSection
+						props={{
+							jobTitle: "Software Developer",
+							startDate: "September 2016",
+							endDate: "July 2017",
+							company: "The Education Hub Group",
+							description:
+								"Node.js backend developer responsible for building and maintaining the API for our bespoke platform for schools.",
+							stack: [TECH_STACK.NODEJS, TECH_STACK.JAVASCRIPT],
+							responsibilities: [
+								"Second employee and developed the idea into a fully-functioning web app.",
+							],
+						}}
+					/>
 
-          <ExperienceSection
-            props={{
-              jobTitle: "Graduate Electrical Building Services Engineer",
-              startDate: "June 2015",
-              endDate: "March 2016",
-              company: "Mott MacDonald",
-              description:
-                "Designed electrical systems for the new Canary Wharf Crossrail station.",
-            }}
-          />
-        </div>
-      </div>
-    </div>
-  );
+					<ExperienceSection
+						props={{
+							jobTitle: "Graduate Electrical Building Services Engineer",
+							startDate: "June 2015",
+							endDate: "March 2016",
+							company: "Mott MacDonald",
+							description:
+								"Designed electrical systems for the new Canary Wharf Crossrail station.",
+						}}
+					/>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 type ExperienceProps = {
-  jobTitle: string;
-  startDate: string;
-  endDate?: string;
-  company: string;
-  description: string;
-  stack?: string[];
-  responsibilities?: string[];
+	jobTitle: string;
+	startDate: string;
+	endDate?: string;
+	company: string;
+	description: string;
+	stack?: string[];
+	responsibilities?: string[];
 };
 
 const ExperienceSection = ({ props }: { props: ExperienceProps }) => {
-  const {
-    jobTitle,
-    startDate,
-    endDate,
-    company,
-    description,
-    stack,
-    responsibilities,
-  } = props;
+	const {
+		jobTitle,
+		startDate,
+		endDate,
+		company,
+		description,
+		stack,
+		responsibilities,
+	} = props;
 
-  return (
-    <div className="bg-stone-800/50 backdrop-blur-xs rounded-xl shadow-lg  p-6 md:p-8 hover:shadow-xl hover:border-stone-600/50 transition-all">
-      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
-        <h2 className="text-2xl font-bold text-stone-100">{jobTitle}</h2>
-        <span className="text-sm text-stone-400 md:text-right whitespace-nowrap">
-          {startDate} – {endDate}
-        </span>
-      </div>
-      <h3 className="text-xl font-semibold text-orange-400 mb-3">{company}</h3>
-      <p className="text-stone-300 leading-relaxed mb-4">{description}</p>
-      {stack && (
-        <div className="mb-4">
-          <div className="flex flex-wrap gap-2">
-            {stack.map((s: string, index: number) => {
-              return (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-stone-700/70 text-stone-200 rounded-full text-sm border border-stone-600/50"
-                >
-                  {s}
-                </span>
-              );
-            })}
-          </div>
-        </div>
-      )}
-      {responsibilities && (
-        <div>
-          <ul>
-            {responsibilities.map((r: string, index: number) => {
-              return (
-                <li
-                  key={index}
-                  className="body-text text-stone-300 leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-orange-400"
-                >
-                  {r}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
-    </div>
-  );
+	return (
+		<div className="bg-stone-800/50 backdrop-blur-xs rounded-xl shadow-lg  p-6 md:p-8 hover:shadow-xl hover:border-stone-600/50 transition-all">
+			<div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+				<h2 className="text-2xl font-bold text-stone-100">{jobTitle}</h2>
+				<span className="text-sm text-stone-400 md:text-right whitespace-nowrap">
+					{startDate} – {endDate}
+				</span>
+			</div>
+			<h3 className="text-xl font-semibold text-orange-400 mb-3">{company}</h3>
+			<p className="text-stone-300 leading-relaxed mb-4">{description}</p>
+			{stack && (
+				<div className="mb-4">
+					<div className="flex flex-wrap gap-2">
+						{stack.map((s: string, index: number) => {
+							return (
+								<span
+									key={index}
+									className="px-3 py-1 bg-stone-700/70 text-stone-200 rounded-full text-sm border border-stone-600/50"
+								>
+									{s}
+								</span>
+							);
+						})}
+					</div>
+				</div>
+			)}
+			{responsibilities && (
+				<div>
+					<ul>
+						{responsibilities.map((r: string, index: number) => {
+							return (
+								<li
+									key={index}
+									className="body-text text-stone-300 leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-orange-400"
+								>
+									{r}
+								</li>
+							);
+						})}
+					</ul>
+				</div>
+			)}
+		</div>
+	);
 };
